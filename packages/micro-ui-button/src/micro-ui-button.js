@@ -13,8 +13,6 @@ export class MCButton extends Component {
     render({ children }) {
         if (this.props.leftIcon) this.props.icon = this.props.leftIcon
 
-        // comment to allow publish
-
         return (
             <button
                 className={this.getClassNames()}
