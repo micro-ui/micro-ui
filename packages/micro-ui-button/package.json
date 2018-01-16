@@ -9,7 +9,7 @@
     "url": "https://github.com/joncarlson/micro-ui/issues"
   },
   "homepage": "https://github.com/joncarlson/micro-ui#readme",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "inferno",
     "react",
