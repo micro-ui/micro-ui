@@ -21,15 +21,11 @@
     "src": "src"
   },
   "scripts": {
-    "build": "node-sass --include-path node_modules/ --output-style compressed src/themes --output dist/themes",
-    "build:watch": "node-sass --watch src/themes --recursive --include-path node_modules/ --output-style compressed --output dist/themes",
-    "copy:scss": "cp -r src/themes dist/themes",
-    "prepublish": "npm run build && npm run copy:scss"
+    "build": "cp -r src/ dist/",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "material-components-web": "^0.28.0"
   },
-  "devDependencies": {
-    "node-sass": "^4.7.2"
-  }
+  "devDependencies": {}
 }
