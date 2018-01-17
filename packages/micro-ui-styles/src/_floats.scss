@@ -1,0 +1,53 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fn {
+    float: none;
+}
+
+@include device(desktop) {
+    .fl-desktop {
+        float: left;
+    }
+
+    .fr-desktop {
+        float: right;
+    }
+
+    .fn-desktop {
+        float: none;
+    }
+}
+
+@include device(tablet) {
+    .fl-tablet {
+        float: left;
+    }
+
+    .fr-tablet {
+        float: right;
+    }
+
+    .fn-tablet {
+        float: none;
+    }
+}
+
+@include device(phone) {
+    .fl-phone {
+        float: left;
+    }
+
+    .fr-phone {
+        float: right;
+    }
+
+    .fn-phone {
+        float: none;
+    }
+}
