@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import "material-components-web/material-components-web";
-@import "./_devices";
-@import "./_spacing";
-@import "./_floats";
-@import "./_clearfix";
-@import "./_display";
-@import "./_debug-grid";
+@import "./base/_devices";
+@import "./base/_spacing";
+@import "./base/_floats";
+@import "./base/_clearfix";
+@import "./base/_display";
+@import "./base/_debug-grid";
