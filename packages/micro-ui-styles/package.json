@@ -20,11 +20,23 @@
   "directories": {
     "src": "src"
   },
+  "watch": {
+    "build": {
+      "patterns": ["src"],
+      "extensions": "scss",
+      "quiet": true,
+      "legacyWatch": true
+    }
+  },
   "scripts": {
     "build": "cp -r src/ dist/",
+    "watch": "npm-watch",
     "prepublish": "npm run build"
   },
   "dependencies": {
     "material-components-web": "^0.28.0"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.3.0"
   }
 }
