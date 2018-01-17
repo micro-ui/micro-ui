@@ -1,0 +1,35 @@
+{
+  "name": "micro-ui-styles",
+  "version": "0.0.0",
+  "description": "micro-ui-styles",
+  "author": "Jon Carlson",
+  "repository": "https://github.com/joncarlson/micro-ui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joncarlson/micro-ui/issues"
+  },
+  "homepage": "https://github.com/joncarlson/micro-ui#readme",
+  "main": "dist/index.css",
+  "keywords": [
+    "inferno",
+    "react",
+    "micro-ui",
+    "performance",
+    "web component"
+  ],
+  "directories": {
+    "src": "src"
+  },
+  "scripts": {
+    "build": "node-sass --include-path node_modules/ --output-style compressed src/themes --output dist/themes",
+    "build:watch": "node-sass --watch src/themes --recursive --include-path node_modules/ --output-style compressed --output dist/themes",
+    "copy:scss": "cp -r src/themes dist/themes",
+    "prepublish": "npm run build && npm run copy:scss"
+  },
+  "dependencies": {
+    "material-components-web": "^0.28.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
