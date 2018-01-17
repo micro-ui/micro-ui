@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import { MDCRipple } from '@material/ripple'
 
 const BASE_CLASS = 'mdc-button'
 const RAISED_CLASS = 'mdc-button--raised'
@@ -10,13 +11,22 @@ const ICON_ONLY_CLASS = 'mdc-button--icon-only'
 
 export class MCButton extends Component {
 
+    componentDidMount() {
+        this.attachRipple()
+    }
+
+    componentDidUnmount() {
+        this.removeRipple()
+    }
+
     render({ children }) {
         if (this.props.leftIcon) this.props.icon = this.props.leftIcon
 
         return (
             <button
                 className={this.getClassNames()}
-                disabled={this.props.disabled}>
+                disabled={this.props.disabled}
+                ref={ element => this.element = element }>
 
                 { this.props.icon &&
                     <i class="material-icons mdc-button__icon">{ this.props.icon }</i>
@@ -30,6 +40,16 @@ export class MCButton extends Component {
 
             </button>
         )
+    }
+
+    attachRipple() {
+        if (this.ripple) return
+        this.ripple = MDCRipple.attachTo(this.element)
+    }
+
+    removeRipple() {
+        if (!this.ripple) return
+        this.ripple.destroy()
     }
 
     getClassNames() {
