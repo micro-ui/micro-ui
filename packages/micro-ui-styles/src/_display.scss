@@ -1,0 +1,201 @@
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.di {
+    display: inline;
+}
+
+.dit {
+    display: inline-table;
+}
+
+.dt {
+    display: table;
+}
+
+.dt-row {
+    display: table-row;
+}
+
+.dt-row-group {
+    display: table-row-group;
+}
+
+.dt-column {
+    display: table-column;
+}
+
+.dt-column-group {
+    display: table-column-group;
+}
+
+.dt--fixed {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.dtc {
+    display: table-cell;
+}
+
+@include device(desktop) {
+    .dn-desktop {
+        display: none;
+    }
+
+    .db-desktop {
+        display: block;
+    }
+
+    .dib-desktop {
+        display: inline-block;
+    }
+
+    .di-desktop {
+        display: inline;
+    }
+
+    .dit-desktop {
+        display: inline-table;
+    }
+
+    .dt-desktop {
+        display: table;
+    }
+
+    .dt-row-desktop {
+        display: table-row;
+    }
+
+    .dt-row-group-desktop {
+        display: table-row-group;
+    }
+
+    .dt-column-desktop {
+        display: table-column;
+    }
+
+    .dt-column-group-desktop {
+        display: table-column-group;
+    }
+
+    .dt--fixed-desktop {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .dtc-desktop {
+        display: table-cell;
+    }
+}
+
+@include device(tablet) {
+    .dn-tablet {
+        display: none;
+    }
+
+    .db-tablet {
+        display: block;
+    }
+
+    .dib-tablet {
+        display: inline-block;
+    }
+
+    .di-tablet {
+        display: inline;
+    }
+
+    .dit-tablet {
+        display: inline-table;
+    }
+
+    .dt-tablet {
+        display: table;
+    }
+
+    .dt-row-tablet {
+        display: table-row;
+    }
+
+    .dt-row-group-tablet {
+        display: table-row-group;
+    }
+
+    .dt-column-tablet {
+        display: table-column;
+    }
+
+    .dt-column-group-tablet {
+        display: table-column-group;
+    }
+
+    .dt--fixed-tablet {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .dtc-tablet {
+        display: table-cell;
+    }
+}
+
+@include device(phone) {
+    .dn-phone {
+        display: none;
+    }
+
+    .db-phone {
+        display: block;
+    }
+
+    .dib-phone {
+        display: inline-block;
+    }
+
+    .di-phone {
+        display: inline;
+    }
+
+    .dit-phone {
+        display: inline-table;
+    }
+
+    .dt-phone {
+        display: table;
+    }
+
+    .dt-row-phone {
+        display: table-row;
+    }
+
+    .dt-row-group-phone {
+        display: table-row-group;
+    }
+
+    .dt-column-phone {
+        display: table-column;
+    }
+
+    .dt-column-group-phone {
+        display: table-column-group;
+    }
+
+    .dt--fixed-phone {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .dtc-phone {
+        display: table-cell;
+    }
+}
