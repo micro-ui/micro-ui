@@ -1,0 +1,61 @@
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+@include device(desktop) {
+    .cf-desktop:before,
+    .cf-desktop:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf-desktop:after {
+        clear: both;
+    }
+
+    .cf-desktop {
+        *zoom: 1;
+    }
+}
+
+@include device(tablet) {
+    .cf-tablet:before,
+    .cf-tablet:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf-tablet:after {
+        clear: both;
+    }
+
+    .cf-tablet {
+        *zoom: 1;
+    }
+}
+
+@include device(phone) {
+    .cf-phone:before,
+    .cf-phone:after {
+        content: " ";
+        display: table;
+    }
+
+    .cf-phone:after {
+        clear: both;
+    }
+
+    .cf-phone {
+        *zoom: 1;
+    }
+}
