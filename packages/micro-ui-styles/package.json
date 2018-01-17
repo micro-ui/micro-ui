@@ -30,7 +30,7 @@
   },
   "scripts": {
     "build": "cp -r src/ dist/",
-    "watch": "npm-watch",
+    "build:watch": "npm-watch",
     "prepublish": "npm run build"
   },
   "dependencies": {
