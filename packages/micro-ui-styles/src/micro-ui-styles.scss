@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import "material-components-web/material-components-web";
-
-body {
-    margin: 0;
-    padding: 0;
-}
+@import "./_devices";
+@import "./_spacing";

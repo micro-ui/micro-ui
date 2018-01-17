@@ -1,0 +1,273 @@
+$mc-theme-spacing-scale-0: 0 !default;
+$mc-theme-spacing-scale-1: .25rem !default;
+$mc-theme-spacing-scale-2: .5rem !default;
+$mc-theme-spacing-scale-3: .75rem !default;
+$mc-theme-spacing-scale-4: 1rem !default;
+$mc-theme-spacing-scale-5: 1.5rem !default;
+$mc-theme-spacing-scale-6: 2rem !default;
+$mc-theme-spacing-scale-7: 3rem !default;
+$mc-theme-spacing-scale-8: 4rem !default;
+$mc-theme-spacing-scale-9: 8rem !default;
+$mc-theme-spacing-scale-10: 16rem !default;
+
+$spacing: (
+    0: $mc-theme-spacing-scale-0,
+    1: $mc-theme-spacing-scale-1,
+    2: $mc-theme-spacing-scale-2,
+    3: $mc-theme-spacing-scale-3,
+    4: $mc-theme-spacing-scale-4,
+    5: $mc-theme-spacing-scale-5,
+    6: $mc-theme-spacing-scale-6,
+    7: $mc-theme-spacing-scale-7,
+    8: $mc-theme-spacing-scale-8,
+    9: $mc-theme-spacing-scale-9,
+    10: $mc-theme-spacing-scale-10
+);
+
+@each $scale, $size in $spacing {
+    .pa#{$scale} {
+        padding: $size;
+    }
+
+    .ph#{$scale} {
+        padding-left: $size;
+        padding-right: $size;
+    }
+
+    .pv#{$scale} {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+
+    .pl#{$scale} {
+        padding-left: $size;
+    }
+
+    .pr#{$scale} {
+        padding-right: $size;
+    }
+
+    .pt#{$scale} {
+        padding-top: $size;
+    }
+
+    .pb#{$scale} {
+        padding-bottom: $size;
+    }
+
+    .ma#{$scale} {
+        margin: $size;
+    }
+
+    .mh#{$scale} {
+        margin-left: $size;
+        margin-right: $size;
+    }
+
+    .mv#{$scale} {
+        margin-top: $size;
+        margin-bottom: $size;
+    }
+
+    .ml#{$scale} {
+        margin-left: $size;
+    }
+
+    .mr#{$scale} {
+        margin-right: $size;
+    }
+
+    .mt#{$scale} {
+        margin-top: $size;
+    }
+
+    .mb#{$scale} {
+        margin-bottom: $size;
+    }
+
+    @include device(desktop) {
+        .pa#{$scale}-desktop {
+            padding: $size;
+        }
+
+        .ph#{$scale}-desktop {
+            padding-left: $size;
+            padding-right: $size;
+        }
+
+        .pv#{$scale}-desktop {
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+
+        .pl#{$scale}-desktop {
+            padding-left: $size;
+        }
+
+        .pr#{$scale}-desktop {
+            padding-right: $size;
+        }
+
+        .pt#{$scale}-desktop {
+            padding-top: $size;
+        }
+
+        .pb#{$scale}-desktop {
+            padding-bottom: $size;
+        }
+
+        .ma#{$scale}-desktop {
+            margin: $size;
+        }
+
+        .mh#{$scale}-desktop {
+            margin-left: $size;
+            margin-right: $size;
+        }
+
+        .mv#{$scale}-desktop {
+            margin-top: $size;
+            margin-bottom: $size;
+        }
+
+        .ml#{$scale}-desktop {
+            margin-left: $size;
+        }
+
+        .mr#{$scale}-desktop {
+            margin-right: $size;
+        }
+
+        .mt#{$scale}-desktop {
+            margin-top: $size;
+        }
+
+        .mb#{$scale}-desktop {
+            margin-bottom: $size;
+        }
+    }
+
+    @include device(tablet) {
+        .pa#{$scale}-tablet {
+            padding: $size;
+        }
+
+        .ph#{$scale}-tablet {
+            padding-left: $size;
+            padding-right: $size;
+        }
+
+        .pv#{$scale}-tablet {
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+
+        .pl#{$scale}-tablet {
+            padding-left: $size;
+        }
+
+        .pr#{$scale}-tablet {
+            padding-right: $size;
+        }
+
+        .pt#{$scale}-tablet {
+            padding-top: $size;
+        }
+
+        .pb#{$scale}-tablet {
+            padding-bottom: $size;
+        }
+
+        .ma#{$scale}-tablet {
+            margin: $size;
+        }
+
+        .mh#{$scale}-tablet {
+            margin-left: $size;
+            margin-right: $size;
+        }
+
+        .mv#{$scale}-tablet {
+            margin-top: $size;
+            margin-bottom: $size;
+        }
+
+        .ml#{$scale}-tablet {
+            margin-left: $size;
+        }
+
+        .mr#{$scale}-tablet {
+            margin-right: $size;
+        }
+
+        .mt#{$scale}-tablet {
+            margin-top: $size;
+        }
+
+        .mb#{$scale}-tablet {
+            margin-bottom: $size;
+        }
+    }
+
+    @include device(phone) {
+        .pa#{$scale}-phone {
+            padding: $size;
+        }
+
+        .ph#{$scale}-phone {
+            padding-left: $size;
+            padding-right: $size;
+        }
+
+        .pv#{$scale}-phone {
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+
+        .pl#{$scale}-phone {
+            padding-left: $size;
+        }
+
+        .pr#{$scale}-phone {
+            padding-right: $size;
+        }
+
+        .pt#{$scale}-phone {
+            padding-top: $size;
+        }
+
+        .pb#{$scale}-phone {
+            padding-bottom: $size;
+        }
+
+        .ma#{$scale}-phone {
+            margin: $size;
+        }
+
+        .mh#{$scale}-phone {
+            margin-left: $size;
+            margin-right: $size;
+        }
+
+        .mv#{$scale}-phone {
+            margin-top: $size;
+            margin-bottom: $size;
+        }
+
+        .ml#{$scale}-phone {
+            margin-left: $size;
+        }
+
+        .mr#{$scale}-phone {
+            margin-right: $size;
+        }
+
+        .mt#{$scale}-phone {
+            margin-top: $size;
+        }
+
+        .mb#{$scale}-phone {
+            margin-bottom: $size;
+        }
+    }
+}
