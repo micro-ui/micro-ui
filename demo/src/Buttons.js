@@ -123,28 +123,28 @@ export default function Buttons() {
 
             <div class="mb5 ph5">
                 <MCButton loading class="mr3">
-                    Submitting
+                    Loading
                 </MCButton>
 
                 <MCButton loading primary class="mr3">
-                    Submitting
+                    Loading
                 </MCButton>
 
                 <MCButton loading secondary class="mr3">
-                    Submitting
+                    Loading
                 </MCButton>
 
                 <MCButton loading tertiary class="mr3">
-                    Submitting
+                    Loading
                 </MCButton>
 
                 <MCButton loading danger class="mr3">
-                    Submitting
+                    Loading
                 </MCButton>
 
                 <div class="pa3 mt2" style="background: #222; width: 150px">
                     <MCButton loading inverse class="mr3">
-                        Submitting
+                        Loading
                     </MCButton>
                 </div>
             </div>

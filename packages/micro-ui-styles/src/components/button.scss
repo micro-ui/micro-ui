@@ -150,6 +150,8 @@
     &[circle] {
         @include mdc-fab-base_;
 
+        min-width: 0;
+
         i {
             @include mdc-fab__icon_;
         }
