@@ -1,0 +1,11 @@
+.mc-icon {
+    font-size: $mc-icon-font-size;
+
+    &[small] {
+        font-size: $mc-small-icon-font-size;
+    }
+
+    &[large] {
+        font-size: $mc-large-icon-font-size;
+    }
+}
