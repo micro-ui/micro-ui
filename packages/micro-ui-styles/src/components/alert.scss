@@ -1,0 +1,63 @@
+.mc-alert {
+    background: $mc-alert-background-color;
+    border: $mc-alert-border-width solid $mc-alert-border-color;
+    border-radius: $mc-alert-border-radius;
+    box-sizing: border-box;
+    color: $mc-alert-text-color;
+    font-size: $mc-alert-font-size;
+    letter-spacing: normal;
+    line-height: 1.5;
+    padding: $mc-alert-padding;
+    position: relative;
+
+    & > i {
+        @include mdc-button__icon_;
+
+        color: $mc-alert-border-color;
+        font-size: 1.3em;
+        line-height: 1.25;
+        margin-right: .5em;
+        width: 1em;
+        height: 1em;
+    }
+
+    &[success] {
+        background-color: $mc-success-alert-background-color;
+        border-color: $mc-success-alert-border-color;
+        color: $mc-success-alert-text-color;
+
+        & > i {
+            color: $mc-success-alert-border-color;
+        }
+    }
+
+    &[info] {
+        background-color: $mc-info-alert-background-color;
+        border-color: $mc-info-alert-border-color;
+        color: $mc-info-alert-text-color;
+
+        & > i {
+            color: $mc-info-alert-border-color;
+        }
+    }
+
+    &[warning] {
+        background-color: $mc-warning-alert-background-color;
+        border-color: $mc-warning-alert-border-color;
+        color: $mc-warning-alert-text-color;
+
+        & > i {
+            color: $mc-warning-alert-text-color;
+        }
+    }
+
+    &[error] {
+        background-color: $mc-error-alert-background-color;
+        border-color: $mc-error-alert-border-color;
+        color: $mc-error-alert-text-color;
+
+        & > i {
+            color: $mc-error-alert-border-color;
+        }
+    }
+}

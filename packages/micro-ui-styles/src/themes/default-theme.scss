@@ -6,6 +6,17 @@
 
 $mc-primary-color: #007cbb !default;
 $mc-secondary-color: #62a420 !default;
+$mc-text-color: #222 !default;
+
+
+/***************************************
+ *
+ * Fonts
+ *
+ **************************************/
+
+$mc-font-family: Roboto, sans-serif !default;
+$mc-font-size: 16px !default;
 
 
 /***************************************
@@ -79,5 +90,36 @@ $mc-inverse-button-disabled-opacity: .4 !default;
 
 $mc-spinner-duration: 1.4s;
 $mc-spinner-offset: 187;
+
+
+/***************************************
+ *
+ * Alerts
+ *
+ **************************************/
+
+$mc-alert-background-color: #e1f1f6 !default;
+$mc-alert-border-color: #49afd9 !default;
+$mc-alert-border-radius: 2px !default;
+$mc-alert-border-width: 1px !default;
+$mc-alert-font-size: .875rem !default;
+$mc-alert-padding: .571em .857em !default;
+$mc-alert-text-color: #222 !default;
+
+$mc-success-alert-background-color: #dff0d0 !default;
+$mc-success-alert-border-color: #60b515 !default;
+$mc-success-alert-text-color: $mc-alert-text-color !default;
+
+$mc-info-alert-background-color: $mc-alert-background-color !default;
+$mc-info-alert-border-color: $mc-alert-border-color !default;
+$mc-info-alert-text-color: $mc-alert-text-color !default;
+
+$mc-warning-alert-background-color: #feecb5 !default;
+$mc-warning-alert-border-color: #ffdc0b !default;
+$mc-warning-alert-text-color: #565656 !default;
+
+$mc-error-alert-background-color: #f5dbd9 !default;
+$mc-error-alert-border-color: #ebafa6 !default;
+$mc-error-alert-text-color: $mc-alert-text-color !default;
 
 @import "../micro-ui-styles";
