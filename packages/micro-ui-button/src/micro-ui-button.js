@@ -1,17 +1,6 @@
 import Component from 'inferno-component'
 import { MDCRipple } from '@material/ripple'
 
-const BASE_CLASS = 'mdc-button'
-const STATE_INFO = 'mdc-button-info'
-const STATE_SUCCESS = 'mdc-button-success'
-const STATE_DANGER = 'mdc-button-danger'
-const TYPE_PRIMARY = 'mdc-button-primary'
-const TYPE_SECONDARY = 'mdc-button-secondary'
-const TYPE_TERTIARY = 'mdc-button-tertiary'
-const MODIFIER_INVERSE = 'mdc-button--inverse'
-const MODIFIER_ICON_ONLY = 'mdc-button--icon-only'
-const MODIFIER_ELEVATED = 'mdc-button--raised'
-
 export class MCButton extends Component {
 
     componentDidMount() {
@@ -24,21 +13,28 @@ export class MCButton extends Component {
 
     render({ children }) {
         if (this.props.leftIcon) this.props.icon = this.props.leftIcon
+        if (this.isIconOnlyButton()) this.props['icon-only'] = true
 
         return (
             <button
-                className={ this.getClassNames() }
-                disabled={ this.props.disabled }
+                className={ 'mc-button ' + (this.props.class ? this.props.class : '') }
+                { ...this.props }
                 ref={ element => this.element = element }>
 
+                { this.props.loading &&
+                    <svg class="mc-spinner" width="18px" height="18px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="mc-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                }
+
                 { this.props.icon &&
-                    <i class="material-icons mdc-button__icon">{ this.props.icon }</i>
+                    <i class="material-icons mc-button__icon">{ this.props.icon }</i>
                 }
 
                 { children }
 
                 { this.props.rightIcon &&
-                    <i class="material-icons mdc-button__icon">{ this.props.rightIcon }</i>
+                    <i class="material-icons mc-button__icon">{ this.props.rightIcon }</i>
                 }
 
             </button>
@@ -55,21 +51,8 @@ export class MCButton extends Component {
         this.ripple.destroy()
     }
 
-    getClassNames() {
-        let classNames = [BASE_CLASS]
-        let iconOnly = !this.props.text && (this.props.icon || this.props.leftIcon || this.props.rightIcon)
-
-        if (iconOnly) classNames.push(MODIFIER_ICON_ONLY)
-        if (this.props.info) classNames.push(STATE_INFO)
-        if (this.props.success) classNames.push(STATE_SUCCESS)
-        if (this.props.danger) classNames.push(STATE_DANGER)
-        if (this.props.primary) classNames.push(TYPE_PRIMARY)
-        if (this.props.secondary) classNames.push(TYPE_SECONDARY)
-        if (this.props.tertiary) classNames.push(TYPE_TERTIARY)
-        if (this.props.elevated) classNames.push(MODIFIER_ELEVATED)
-        if (this.props.inverse) classNames.push(MODIFIER_INVERSE)
-
-        return classNames.join(' ')
+    isIconOnlyButton() {
+        return !this.props.children && (this.props.icon || this.props.leftIcon || this.props.rightIcon)
     }
 
 }

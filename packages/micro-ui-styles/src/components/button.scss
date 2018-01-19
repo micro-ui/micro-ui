@@ -1,0 +1,179 @@
+.mc-button {
+    @include mdc-button-base_;
+    @include mdc-button--stroked_;
+    @include mdc-button-corner-radius($mc-button-border-radius);
+    @include mdc-button-container-fill-color($mc-button-background-color);
+    @include mdc-button-ink-color($mc-button-text-color);
+    @include mdc-button-stroke-color($mc-button-stroke-color);
+    @include mdc-button-stroke-width($mc-button-stroke-width);
+    @include mdc-states($mc-button-ripple-color);
+    @include mdc-states-hover-opacity($mc-button-hover-opacity);
+    @include mdc-states-press-opacity($mc-button-ripple-opacity);
+
+    text-transform: none;
+
+    &:before {
+        transition: opacity .15s ease;
+    }
+
+    .mc-spinner {
+        animation: rotator $mc-spinner-duration linear infinite;
+        margin-right: .875em;
+        position: relative;
+        top: .1875em;
+    }
+
+    .mc-spinner-path {
+        stroke: $mc-button-stroke-color;
+        stroke-dasharray: $mc-spinner-offset;
+        stroke-dashoffset: 0;
+        transform-origin: center;
+        animation: dash $mc-spinner-duration ease-in-out infinite;
+    }
+
+    &[disabled] {
+        opacity: $mc-button-disabled-opacity;
+    }
+
+    &[primary] {
+        @include mdc-button-container-fill-color($mc-primary-button-background-color);
+        @include mdc-button-stroke-color($mc-primary-button-stroke-color);
+        @include mdc-button-stroke-width($mc-primary-button-stroke-width);
+        @include mdc-button-ink-color($mc-primary-button-text-color);
+        @include mdc-states-base-color($mc-primary-button-ripple-color);
+
+        .mc-spinner-path {
+            stroke: $mc-primary-button-text-color;
+        }
+
+        &[disabled] {
+            @include mdc-button-stroke-width($mc-button-border-radius);
+        }
+    }
+
+    &[secondary] {
+        @include mdc-button-container-fill-color($mc-secondary-button-background-color);
+        @include mdc-button-stroke-color($mc-secondary-button-stroke-color);
+        @include mdc-button-stroke-width($mc-secondary-button-stroke-width);
+        @include mdc-button-ink-color($mc-secondary-button-text-color);
+        @include mdc-states-base-color($mc-secondary-button-ripple-color);
+
+        .mc-spinner-path {
+            stroke: $mc-secondary-button-text-color;
+        }
+
+        &[disabled] {
+            @include mdc-button-stroke-width($mc-button-border-radius);
+        }
+    }
+
+    &[tertiary] {
+        @include mdc-button-container-fill-color($mc-tertiary-button-background-color);
+        @include mdc-button-stroke-color($mc-tertiary-button-stroke-color);
+        @include mdc-button-stroke-width($mc-tertiary-button-stroke-width);
+        @include mdc-button-ink-color($mc-tertiary-button-text-color);
+        @include mdc-states-base-color($mc-tertiary-button-ripple-color);
+
+        .mc-spinner-path {
+            stroke: $mc-tertiary-button-text-color;
+        }
+    }
+
+    &[danger] {
+        @include mdc-button-container-fill-color($mc-danger-button-background-color);
+        @include mdc-button-stroke-color($mc-danger-button-stroke-color);
+        @include mdc-button-stroke-width($mc-danger-button-stroke-width);
+        @include mdc-button-ink-color($mc-danger-button-text-color);
+        @include mdc-states-base-color($mc-danger-button-ripple-color);
+
+        .mc-spinner-path {
+            stroke: $mc-danger-button-text-color;
+        }
+
+        &[disabled] {
+            @include mdc-button-stroke-width($mc-button-border-radius);
+        }
+    }
+
+    &[inverse] {
+        @include mdc-button-container-fill-color($mc-inverse-button-background-color);
+        @include mdc-button-stroke-color($mc-inverse-button-stroke-color);
+        @include mdc-button-stroke-width($mc-inverse-button-stroke-width);
+        @include mdc-button-ink-color($mc-inverse-button-text-color);
+        @include mdc-states-base-color($mc-inverse-button-ripple-color);
+
+        .mc-spinner-path {
+            stroke: $mc-inverse-button-text-color;
+        }
+
+        &[disabled] {
+            @include mdc-button-stroke-width($mc-button-border-radius);
+
+            color: $mc-inverse-button-text-color;
+            border-color: $mc-inverse-button-stroke-color;
+            opacity: $mc-inverse-button-disabled-opacity;
+        }
+    }
+
+    &[small] {
+        font-size: $mc-small-button-font-size;
+        height: $mc-small-button-height;
+        line-height: $mc-small-button-line-height;
+    }
+
+    &[large] {
+        font-size: $mc-large-button-font-size;
+        height: $mc-large-button-height;
+        line-height: $mc-large-button-line-height;
+    }
+
+    &[raised] {
+        @include mdc-button--raised_;
+    }
+
+    &:not([circle]) {
+        i {
+            @include mdc-button__icon_;
+        }
+
+        &[rightIcon] i {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+
+        &[icon-only] i {
+            line-height: 1;
+            margin: 0;
+        }
+    }
+
+    &[circle] {
+        @include mdc-fab-base_;
+
+        i {
+            @include mdc-fab__icon_;
+        }
+    }
+
+}
+
+@keyframes rotator {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(270deg); }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: $mc-spinner-offset;
+    }
+
+    50% {
+        stroke-dashoffset: $mc-spinner-offset/4;
+        transform:rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: $mc-spinner-offset;
+        transform:rotate(450deg);
+    }
+}
