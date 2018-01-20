@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import "./base/_mdc-variables";
+@import "./base/_mixins";
 @import "material-components-web/material-components-web";
 @import "./base/_devices";
 @import "./base/_spacing";
@@ -10,6 +11,7 @@
 @import "./base/_typography";
 
 @import "./components/alert";
+@import "./components/badge";
 @import "./components/button";
 @import "./components/icon";
 @import "./components/image";

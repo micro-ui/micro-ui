@@ -2,6 +2,7 @@ import {render} from 'inferno'
 import { Router, Link, Route, IndexRoute } from 'inferno-router'
 import createBrowserHistory from 'history/createBrowserHistory'
 import Alerts from './Alerts'
+import Badges from './Badges'
 import Buttons from './Buttons'
 import Icons from './Icons'
 import Images from './Images'
@@ -19,6 +20,7 @@ function ComponentList() {
             <h3>Micro UI Components:</h3>
 
             <p><Link to="/alerts">Alerts</Link></p>
+            <p><Link to="/badges">Badges</Link></p>
             <p><Link to="/buttons">Buttons</Link></p>
             <p><Link to="/icons">Icons</Link></p>
             <p><Link to="/images">Images</Link></p>
@@ -31,6 +33,7 @@ const routes = (
 		<Route component={ App }>
 			<IndexRoute component={ ComponentList } />
             <Route path="/alerts" component={ Alerts } />
+            <Route path="/badges" component={ Badges } />
             <Route path="/buttons" component={ Buttons } />
             <Route path="/icons" component={ Icons } />
             <Route path="/images" component={ Images } />

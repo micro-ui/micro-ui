@@ -1,0 +1,36 @@
+.mc-badge {
+    display: inline-block;
+    line-height: pxToEm($mc-badge-height);
+    padding-right: pxToEm($mc-badge-width + 8px);
+    position: relative;
+
+    .mc-badge-content {
+        background: $mc-badge-background-color;
+        border-radius: 50%;
+        color: $mc-badge-text-color;
+        font-size: pxToEm($mc-badge-font-size);
+        font-weight: $mc-badge-font-weight;
+        line-height: pxToEm($mc-badge-height, $mc-badge-font-size);
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        width: pxToEm($mc-badge-width, $mc-badge-font-size);
+        height: pxToEm($mc-badge-height, $mc-badge-font-size);
+    }
+
+    &[primary] .mc-badge-content {
+        background: $mc-primary-badge-background-color;
+        color: $mc-primary-badge-text-color;
+    }
+
+    &[secondary] .mc-badge-content {
+        background: $mc-secondary-badge-background-color;
+        color: $mc-secondary-badge-text-color;
+    }
+
+    &[tertiary] .mc-badge-content {
+        background: $mc-tertiary-badge-background-color;
+        color: $mc-tertiary-badge-text-color;
+    }
+}

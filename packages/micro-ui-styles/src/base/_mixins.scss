@@ -1,0 +1,3 @@
+@function pxToEm($pxSize, $baseFontSize: $mc-font-size) {
+    @return ($pxSize / $baseFontSize) * 1em;
+}

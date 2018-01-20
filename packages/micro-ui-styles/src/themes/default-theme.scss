@@ -6,6 +6,7 @@
 
 $mc-primary-color: #007cbb !default;
 $mc-secondary-color: #62a420 !default;
+$mc-danger-color: #e62700 !default;
 $mc-text-color: #222 !default;
 
 
@@ -32,6 +33,29 @@ $mc-large-icon-font-size: 1.875em !default;
 
 /***************************************
  *
+ * Badges
+ *
+ **************************************/
+
+$mc-badge-background-color: #737373 !default;
+$mc-badge-font-size: 12px !default;
+$mc-badge-font-weight: 500 !default;
+$mc-badge-text-color: #fff !default;
+$mc-badge-width: 24px !default;
+$mc-badge-height: 24px !default;
+
+$mc-primary-badge-background-color: $mc-primary-color !default;
+$mc-primary-badge-text-color: $mc-badge-text-color !default;
+
+$mc-secondary-badge-background-color: $mc-secondary-color !default;
+$mc-secondary-badge-text-color: $mc-badge-text-color !default;
+
+$mc-tertiary-badge-background-color: $mc-danger-color !default;
+$mc-tertiary-badge-text-color: $mc-badge-text-color !default;
+
+
+/***************************************
+ *
  * Buttons
  *
  **************************************/
@@ -46,45 +70,38 @@ $mc-button-ripple-opacity: .5 !default;
 $mc-button-border-radius: 2px !default;
 $mc-button-disabled-opacity: .4 !default;
 
-// small button
 $mc-small-button-font-size: .8em !default;
 $mc-small-button-height: 28px !default;
 $mc-small-button-line-height: 26px !default;
 
-// large button
 $mc-large-button-font-size: 1.1em !default;
 $mc-large-button-height: 40px !default;
 $mc-large-button-line-height: 38px !default;
 
-// primary button
 $mc-primary-button-background-color: $mc-primary-color !default;
 $mc-primary-button-text-color: #fff !default;
 $mc-primary-button-stroke-color: $mc-primary-button-background-color !default;
 $mc-primary-button-stroke-width: 0 !default;
 $mc-primary-button-ripple-color: $mc-primary-button-text-color !default;
 
-// secondary button
 $mc-secondary-button-background-color: $mc-secondary-color !default;
 $mc-secondary-button-text-color: #fff !default;
 $mc-secondary-button-stroke-color: $mc-secondary-button-background-color !default;
 $mc-secondary-button-stroke-width: 0 !default;
 $mc-secondary-button-ripple-color: $mc-secondary-button-text-color !default;
 
-// tertiary button
 $mc-tertiary-button-background-color: transparent !default;
 $mc-tertiary-button-text-color: $mc-primary-color !default;
 $mc-tertiary-button-stroke-color: $mc-tertiary-button-background-color !default;
 $mc-tertiary-button-stroke-width: 0 !default;
 $mc-tertiary-button-ripple-color: $mc-tertiary-button-text-color !default;
 
-// danger button
-$mc-danger-button-background-color: #e62700 !default;
+$mc-danger-button-background-color: $mc-danger-color !default;
 $mc-danger-button-text-color: #fff !default;
 $mc-danger-button-stroke-color: $mc-danger-button-background-color !default;
 $mc-danger-button-stroke-width: 0 !default;
 $mc-danger-button-ripple-color: $mc-danger-button-text-color !default;
 
-// inverse button
 $mc-inverse-button-background-color: transparent !default;
 $mc-inverse-button-text-color: #fff !default;
 $mc-inverse-button-stroke-color: #fff !default;
