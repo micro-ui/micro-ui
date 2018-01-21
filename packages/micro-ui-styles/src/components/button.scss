@@ -1,3 +1,19 @@
+.mc-button-group {
+    & > .mc-button {
+        &:not(:first-child),
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &:not(:last-child),
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
+
 .mc-button {
     @include mdc-button-base_;
     @include mdc-button--stroked_;

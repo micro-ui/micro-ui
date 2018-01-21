@@ -1,6 +1,6 @@
 import { linkEvent } from 'inferno'
 import { Link } from 'inferno-router'
-import { MCButton } from '../../packages/micro-ui-button/dist/'
+import { MCButton, MCButtonGroup, } from '../../packages/micro-ui-button/dist/'
 
 export default function Buttons() {
     return (
@@ -117,6 +117,40 @@ export default function Buttons() {
                 </MCButton>
 
                 <MCButton danger raised circle icon="email" />
+            </div>
+
+            <h3>Button groups</h3>
+
+            <div class="mb5 ph5">
+                <MCButtonGroup>
+                    <MCButton primary>
+                        One
+                    </MCButton>
+
+                    <MCButton primary>
+                        Two
+                    </MCButton>
+
+                    <MCButton primary>
+                        Three
+                    </MCButton>
+                </MCButtonGroup>
+            </div>
+
+            <div class="mb5 ph5">
+                <MCButtonGroup>
+                    <MCButton primary>
+                        One
+                    </MCButton>
+
+                    <MCButton secondary>
+                        Two
+                    </MCButton>
+
+                    <MCButton disabled>
+                        Three
+                    </MCButton>
+                </MCButtonGroup>
             </div>
 
             <h3>Loading buttons</h3>
