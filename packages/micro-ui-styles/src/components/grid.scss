@@ -1,0 +1,154 @@
+$mc-grid-span-1-percent: (1 / 12) * 100%;
+$mc-grid-span-2-percent: (2 / 12) * 100%;
+$mc-grid-span-3-percent: (3 / 12) * 100%;
+$mc-grid-span-4-percent: (4 / 12) * 100%;
+$mc-grid-span-5-percent: (5 / 12) * 100%;
+$mc-grid-span-6-percent: (6 / 12) * 100%;
+$mc-grid-span-7-percent: (7 / 12) * 100%;
+$mc-grid-span-8-percent: (8 / 12) * 100%;
+$mc-grid-span-9-percent: (9 / 12) * 100%;
+$mc-grid-span-10-percent: (10 / 12) * 100%;
+$mc-grid-span-11-percent: (11 / 12) * 100%;
+$mc-grid-span-12-percent: 100%;
+
+.mc-grid {
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    &[align="left"] > .mc-grid-inner { justify-content: flex-start; }
+    &[align="center"] > .mc-grid-inner { justify-content: center; }
+    &[align="right"] > .mc-grid-inner { justify-content: flex-end; }
+    &[vertical-align="top"] > .mc-grid-inner { align-items: flex-start; }
+    &[vertical-align="middle"] > .mc-grid-inner { align-items: center; }
+    &[vertical-align="bottom"] > .mc-grid-inner { align-items: flex-end; }
+    &[space-between] > .mc-grid-inner { justify-content: space-between; }
+    &[space-around] > .mc-grid-inner { justify-content: space-around; }
+    &[reverse] > .mc-grid-inner { flex-direction: row-reverse; }
+
+    @include device(tablet) {
+        &[tablet-align="left"] > .mc-grid-inner { justify-content: flex-start; }
+        &[tablet-align="center"] > .mc-grid-inner { justify-content: center; }
+        &[tablet-align="right"] > .mc-grid-inner { justify-content: flex-end; }
+        &[tablet-vertical-align="top"] > .mc-grid-inner { align-items: flex-start; }
+        &[tablet-vertical-align="middle"] > .mc-grid-inner { align-items: center; }
+        &[tablet-vertical-align="bottom"] > .mc-grid-inner { align-items: flex-end; }
+        &[tablet-space-between] > .mc-grid-inner { justify-content: space-between; }
+        &[tablet-space-around] > .mc-grid-inner { justify-content: space-around; }
+        &[tablet-reverse] > .mc-grid-inner { flex-direction: row-reverse; }
+    }
+
+    @include device(phone) {
+        &[phone-align="left"] > .mc-grid-inner { justify-content: flex-start; }
+        &[phone-align="center"] > .mc-grid-inner { justify-content: center; }
+        &[phone-align="right"] > .mc-grid-inner { justify-content: flex-end; }
+        &[phone-vertical-align="top"] > .mc-grid-inner { align-items: flex-start; }
+        &[phone-vertical-align="middle"] > .mc-grid-inner { align-items: center; }
+        &[phone-vertical-align="bottom"] > .mc-grid-inner { align-items: flex-end; }
+        &[phone-space-between] > .mc-grid-inner { justify-content: space-between; }
+        &[phone-space-around] > .mc-grid-inner { justify-content: space-around; }
+        &[phone-reverse] > .mc-grid-inner { flex-direction: row-reverse; }
+    }
+}
+
+.mc-grid-inner {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.mc-grid-cell {
+    box-sizing: border-box;
+    flex: 1 0 auto;
+
+    &[span="1"] { flex: none; width: $mc-grid-span-1-percent; }
+    &[span="2"] { flex: none; width: $mc-grid-span-2-percent; }
+    &[span="3"] { flex: none; width: $mc-grid-span-3-percent; }
+    &[span="4"] { flex: none; width: $mc-grid-span-4-percent; }
+    &[span="5"] { flex: none; width: $mc-grid-span-5-percent; }
+    &[span="6"] { flex: none; width: $mc-grid-span-6-percent; }
+    &[span="7"] { flex: none; width: $mc-grid-span-7-percent; }
+    &[span="8"] { flex: none; width: $mc-grid-span-8-percent; }
+    &[span="9"] { flex: none; width: $mc-grid-span-9-percent; }
+    &[span="10"] { flex: none; width: $mc-grid-span-10-percent; }
+    &[span="11"] { flex: none; width: $mc-grid-span-11-percent; }
+    &[span="12"] { flex: none; width: $mc-grid-span-12-percent; }
+
+    &[offset="1"] { margin-left: $mc-grid-span-1-percent; }
+    &[offset="2"] { margin-left: $mc-grid-span-2-percent; }
+    &[offset="3"] { margin-left: $mc-grid-span-3-percent; }
+    &[offset="4"] { margin-left: $mc-grid-span-4-percent; }
+    &[offset="5"] { margin-left: $mc-grid-span-5-percent; }
+    &[offset="6"] { margin-left: $mc-grid-span-6-percent; }
+    &[offset="7"] { margin-left: $mc-grid-span-7-percent; }
+    &[offset="8"] { margin-left: $mc-grid-span-8-percent; }
+    &[offset="9"] { margin-left: $mc-grid-span-9-percent; }
+    &[offset="10"] { margin-left: $mc-grid-span-10-percent; }
+    &[offset="11"] { margin-left: $mc-grid-span-11-percent; }
+    &[offset="12"] { margin-left: $mc-grid-span-12-percent; }
+
+    &[order-first] { order: -1; }
+    &[order-last] { order: 1; }
+
+    @include device(tablet) {
+        &[tablet-span="1"] { flex: none; width: $mc-grid-span-1-percent; }
+        &[tablet-span="2"] { flex: none; width: $mc-grid-span-2-percent; }
+        &[tablet-span="3"] { flex: none; width: $mc-grid-span-3-percent; }
+        &[tablet-span="4"] { flex: none; width: $mc-grid-span-4-percent; }
+        &[tablet-span="5"] { flex: none; width: $mc-grid-span-5-percent; }
+        &[tablet-span="6"] { flex: none; width: $mc-grid-span-6-percent; }
+        &[tablet-span="7"] { flex: none; width: $mc-grid-span-7-percent; }
+        &[tablet-span="8"] { flex: none; width: $mc-grid-span-8-percent; }
+        &[tablet-span="9"] { flex: none; width: $mc-grid-span-9-percent; }
+        &[tablet-span="10"] { flex: none; width: $mc-grid-span-10-percent; }
+        &[tablet-span="11"] { flex: none; width: $mc-grid-span-11-percent; }
+        &[tablet-span="12"] { flex: none; width: $mc-grid-span-12-percent; }
+
+        &[tablet-offset="1"] { margin-left: $mc-grid-span-1-percent; }
+        &[tablet-offset="2"] { margin-left: $mc-grid-span-2-percent; }
+        &[tablet-offset="3"] { margin-left: $mc-grid-span-3-percent; }
+        &[tablet-offset="4"] { margin-left: $mc-grid-span-4-percent; }
+        &[tablet-offset="5"] { margin-left: $mc-grid-span-5-percent; }
+        &[tablet-offset="6"] { margin-left: $mc-grid-span-6-percent; }
+        &[tablet-offset="7"] { margin-left: $mc-grid-span-7-percent; }
+        &[tablet-offset="8"] { margin-left: $mc-grid-span-8-percent; }
+        &[tablet-offset="9"] { margin-left: $mc-grid-span-9-percent; }
+        &[tablet-offset="10"] { margin-left: $mc-grid-span-10-percent; }
+        &[tablet-offset="11"] { margin-left: $mc-grid-span-11-percent; }
+        &[tablet-offset="12"] { margin-left: $mc-grid-span-12-percent; }
+
+        &[tablet-order-first] { order: -1; }
+        &[tablet-order-last] { order: 1; }
+    }
+
+    @include device(phone) {
+        &[phone-span="1"] { flex: none; width: $mc-grid-span-1-percent; }
+        &[phone-span="2"] { flex: none; width: $mc-grid-span-2-percent; }
+        &[phone-span="3"] { flex: none; width: $mc-grid-span-3-percent; }
+        &[phone-span="4"] { flex: none; width: $mc-grid-span-4-percent; }
+        &[phone-span="5"] { flex: none; width: $mc-grid-span-5-percent; }
+        &[phone-span="6"] { flex: none; width: $mc-grid-span-6-percent; }
+        &[phone-span="7"] { flex: none; width: $mc-grid-span-7-percent; }
+        &[phone-span="8"] { flex: none; width: $mc-grid-span-8-percent; }
+        &[phone-span="9"] { flex: none; width: $mc-grid-span-9-percent; }
+        &[phone-span="10"] { flex: none; width: $mc-grid-span-10-percent; }
+        &[phone-span="11"] { flex: none; width: $mc-grid-span-11-percent; }
+        &[phone-span="12"] { flex: none; width: $mc-grid-span-12-percent; }
+
+        &[phone-offset="1"] { margin-left: $mc-grid-span-1-percent; }
+        &[phone-offset="2"] { margin-left: $mc-grid-span-2-percent; }
+        &[phone-offset="3"] { margin-left: $mc-grid-span-3-percent; }
+        &[phone-offset="4"] { margin-left: $mc-grid-span-4-percent; }
+        &[phone-offset="5"] { margin-left: $mc-grid-span-5-percent; }
+        &[phone-offset="6"] { margin-left: $mc-grid-span-6-percent; }
+        &[phone-offset="7"] { margin-left: $mc-grid-span-7-percent; }
+        &[phone-offset="8"] { margin-left: $mc-grid-span-8-percent; }
+        &[phone-offset="9"] { margin-left: $mc-grid-span-9-percent; }
+        &[phone-offset="10"] { margin-left: $mc-grid-span-10-percent; }
+        &[phone-offset="11"] { margin-left: $mc-grid-span-11-percent; }
+        &[phone-offset="12"] { margin-left: $mc-grid-span-12-percent; }
+
+        &[phone-order-first] { order: -1; }
+        &[phone-order-last] { order: 1; }
+    }
+}

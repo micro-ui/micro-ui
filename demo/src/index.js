@@ -4,6 +4,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import Alerts from './Alerts'
 import Badges from './Badges'
 import Buttons from './Buttons'
+import Grid from './Grid'
 import Icons from './Icons'
 import Images from './Images'
 import './index.scss'
@@ -22,6 +23,7 @@ function ComponentList() {
             <p><Link to="/alerts">Alerts</Link></p>
             <p><Link to="/badges">Badges</Link></p>
             <p><Link to="/buttons">Buttons</Link></p>
+            <p><Link to="/grid">Grid</Link></p>
             <p><Link to="/icons">Icons</Link></p>
             <p><Link to="/images">Images</Link></p>
         </div>
@@ -35,6 +37,7 @@ const routes = (
             <Route path="/alerts" component={ Alerts } />
             <Route path="/badges" component={ Badges } />
             <Route path="/buttons" component={ Buttons } />
+            <Route path="/grid" component={ Grid } />
             <Route path="/icons" component={ Icons } />
             <Route path="/images" component={ Images } />
 			<Route path="*" component={ ComponentList } />
