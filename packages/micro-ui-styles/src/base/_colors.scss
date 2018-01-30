@@ -1,0 +1,28 @@
+$colors: (
+    text: $mc-text-color,
+    primary: $mc-primary-color,
+    primary-light: $mc-primary-light-color,
+    primary-dark: $mc-primary-dark-color,
+    secondary: $mc-secondary-color,
+    secondary-light: $mc-secondary-light-color,
+    secondary-dark: $mc-secondary-dark-color,
+    info: $mc-info-color,
+    ok: $mc-ok-color,
+    danger: $mc-danger-color,
+    warning: $mc-warning-color,
+    neutral: $mc-neutral-color,
+);
+
+@each $colorName, $color in $colors {
+    .#{$colorName}-color {
+        color: $color !important;
+    }
+
+    .#{$colorName}-background-color {
+        background-color: $color !important;
+    }
+
+    .#{$colorName}-border-color {
+        border-color: $color !important;
+    }
+}

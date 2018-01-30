@@ -4,10 +4,23 @@
  *
  **************************************/
 
-$mc-primary-color: #007cbb !default;
-$mc-secondary-color: #62a420 !default;
-$mc-danger-color: #e62700 !default;
+$mc-background-color: #eee !default;
 $mc-text-color: #222 !default;
+$mc-text-on-dark-color: #fff !default;
+
+$mc-primary-color: #007cbb !default;
+$mc-primary-light-color: lighten($mc-primary-color, 10%) !default;
+$mc-primary-dark-color: darken($mc-primary-color, 10%) !default;
+
+$mc-secondary-color: #62a420 !default;
+$mc-secondary-light-color: lighten($mc-secondary-color, 10%) !default;
+$mc-secondary-dark-color: darken($mc-secondary-color, 10%) !default;
+
+$mc-info-color: #49afd9 !default;
+$mc-ok-color: #60b515 !default;
+$mc-danger-color: #e62700 !default;
+$mc-warning-color: #ffdc0b !default;
+$mc-neutral-color: #222 !default;
 
 
 /***************************************
@@ -37,10 +50,10 @@ $mc-large-icon-font-size: 1.875em !default;
  *
  **************************************/
 
-$mc-badge-background-color: #737373 !default;
+$mc-badge-background-color: $mc-neutral-color !default;
 $mc-badge-font-size: 12px !default;
 $mc-badge-font-weight: 500 !default;
-$mc-badge-text-color: #fff !default;
+$mc-badge-text-color: $mc-text-on-dark-color !default;
 $mc-badge-width: 24px !default;
 $mc-badge-height: 24px !default;
 
@@ -79,13 +92,13 @@ $mc-large-button-height: 40px !default;
 $mc-large-button-line-height: 38px !default;
 
 $mc-primary-button-background-color: $mc-primary-color !default;
-$mc-primary-button-text-color: #fff !default;
+$mc-primary-button-text-color: $mc-text-on-dark-color !default;
 $mc-primary-button-stroke-color: $mc-primary-button-background-color !default;
 $mc-primary-button-stroke-width: 0 !default;
 $mc-primary-button-ripple-color: $mc-primary-button-text-color !default;
 
 $mc-secondary-button-background-color: $mc-secondary-color !default;
-$mc-secondary-button-text-color: #fff !default;
+$mc-secondary-button-text-color: $mc-text-on-dark-color !default;
 $mc-secondary-button-stroke-color: $mc-secondary-button-background-color !default;
 $mc-secondary-button-stroke-width: 0 !default;
 $mc-secondary-button-ripple-color: $mc-secondary-button-text-color !default;
@@ -97,14 +110,14 @@ $mc-tertiary-button-stroke-width: 0 !default;
 $mc-tertiary-button-ripple-color: $mc-tertiary-button-text-color !default;
 
 $mc-danger-button-background-color: $mc-danger-color !default;
-$mc-danger-button-text-color: #fff !default;
+$mc-danger-button-text-color: $mc-text-on-dark-color !default;
 $mc-danger-button-stroke-color: $mc-danger-button-background-color !default;
 $mc-danger-button-stroke-width: 0 !default;
 $mc-danger-button-ripple-color: $mc-danger-button-text-color !default;
 
 $mc-inverse-button-background-color: transparent !default;
-$mc-inverse-button-text-color: #fff !default;
-$mc-inverse-button-stroke-color: #fff !default;
+$mc-inverse-button-text-color: $mc-text-on-dark-color !default;
+$mc-inverse-button-stroke-color: $mc-text-on-dark-color !default;
 $mc-inverse-button-stroke-width: 2px !default;
 $mc-inverse-button-ripple-color: $mc-inverse-button-text-color !default;
 $mc-inverse-button-disabled-opacity: .4 !default;
@@ -126,28 +139,28 @@ $mc-spinner-offset: 187;
  *
  **************************************/
 
-$mc-alert-background-color: #e1f1f6 !default;
-$mc-alert-border-color: #49afd9 !default;
+$mc-alert-background-color: lighten($mc-info-color, 50%) !default;
+$mc-alert-border-color: $mc-info-color !default;
 $mc-alert-border-radius: 2px !default;
 $mc-alert-border-width: 1px !default;
 $mc-alert-font-size: .875rem !default;
 $mc-alert-padding: .571em .857em !default;
-$mc-alert-text-color: #222 !default;
+$mc-alert-text-color: $mc-text-color !default;
 
-$mc-success-alert-background-color: #dff0d0 !default;
-$mc-success-alert-border-color: #60b515 !default;
+$mc-success-alert-background-color: lighten($mc-ok-color, 50%) !default;
+$mc-success-alert-border-color: $mc-ok-color !default;
 $mc-success-alert-text-color: $mc-alert-text-color !default;
 
 $mc-info-alert-background-color: $mc-alert-background-color !default;
 $mc-info-alert-border-color: $mc-alert-border-color !default;
 $mc-info-alert-text-color: $mc-alert-text-color !default;
 
-$mc-warning-alert-background-color: #feecb5 !default;
-$mc-warning-alert-border-color: #ffdc0b !default;
+$mc-warning-alert-background-color: lighten($mc-warning-color, 40%) !default;
+$mc-warning-alert-border-color: $mc-warning-color !default;
 $mc-warning-alert-text-color: #565656 !default;
 
-$mc-error-alert-background-color: #f5dbd9 !default;
-$mc-error-alert-border-color: #ebafa6 !default;
+$mc-error-alert-background-color: lighten($mc-danger-color, 50%) !default;
+$mc-error-alert-border-color: $mc-danger-color !default;
 $mc-error-alert-text-color: $mc-alert-text-color !default;
 
 @import "../micro-ui-styles";
