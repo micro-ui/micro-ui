@@ -7,12 +7,25 @@ import Buttons from './Buttons'
 import Grid from './Grid'
 import Icons from './Icons'
 import Images from './Images'
+import { MCToolbar, MCToolbarRow, MCToolbarSection } from '../../packages/micro-ui-toolbar/dist/'
 import './index.scss'
 
 const browserHistory = createBrowserHistory()
 
 function App({ children }) {
-    return ( <div>{children}</div> )
+    return (
+        <div>
+            <MCToolbar>
+                <MCToolbarRow>
+                    <MCToolbarSection align-left class="ph4">
+                        <span class="title">Micro UI</span>
+                    </MCToolbarSection>
+                </MCToolbarRow>
+            </MCToolbar>
+
+            <div>{children}</div>
+        </div>
+    )
 }
 
 function ComponentList() {
