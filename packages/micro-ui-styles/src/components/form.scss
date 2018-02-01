@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-size: pxToEm($mc-form-input-font-size);
     outline: none;
+    padding: pxToEm(9px, $mc-form-input-font-size);
     resize: none;
     transition: border .15s ease;
 
@@ -43,12 +44,29 @@
     }
 
     input,
-    textarea {
+    textarea,
+    select {
         @extend %mc-form-input-base-style;
     }
 
     textarea {
         height: pxToEm($mc-form-input-font-size * 7);
+    }
+
+    select {
+        background: transparent;
+        border: none;
+        height: pxToEm(40px, $mc-form-input-font-size);
+        z-index: 2;
+
+        & ~ .mc-form-select-overlay {
+            background: #fff;
+            z-index: 1;
+        }
+
+        & ~ .mc-form-input-border {
+            z-index: 3;
+        }
     }
 
     .mc-form-input-border {
@@ -71,6 +89,18 @@
         margin-top: pxToEm(10px, 14px);
         text-align: right;
         width: 100%;
+    }
+
+    .mc-form-select-overlay {
+        border-color: $mc-form-input-border-color;
+        border-style: solid;
+        border-width: $mc-form-input-border-width;
+        border-radius: 3px;
+        box-sizing: border-box;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 

@@ -1,6 +1,6 @@
 import Component from 'inferno-component'
 
-export class MCInput extends Component {
+export class MCSelect extends Component {
 
     state = {
         value: ''
@@ -14,17 +14,19 @@ export class MCInput extends Component {
     }
 
     componentDidMount() {
-        this.positionBorder()
-        setTimeout(this.positionBorder.bind(this), 50)
+        this.positionBorderAndOverlay()
+        setTimeout(this.positionBorderAndOverlay.bind(this), 50)
     }
 
     handleChange(event) {
+        console.log('changed ', event)
+
         this.setState({ value: event.target.value })
         this.props.onChange && this.props.onChange(this.state.value)
     }
 
     handleFocus(event) {
-        this.positionBorder()
+        this.positionBorderAndOverlay()
         event.target.parentElement.classList.add('mc-focus')
     }
 
@@ -32,21 +34,25 @@ export class MCInput extends Component {
         event.target.parentElement.classList.remove('mc-focus')
     }
 
-    positionBorder() {
-        let inputEl = this._vNode.dom.querySelector('input')
-        let rect = inputEl.getBoundingClientRect()
-        let border = inputEl.nextSibling
-
-        border.style.left = `${inputEl.offsetLeft}px`
-        border.style.top = `${inputEl.offsetTop}px`
-        border.style.width = `${rect.width}px`
-        border.style.height = `${rect.height}px`
+    positionBorderAndOverlay() {
+        this.positionElementOnSelect(this._vNode.dom.querySelector('.mc-form-input-border'))
+        this.positionElementOnSelect(this._vNode.dom.querySelector('.mc-form-select-overlay'))
     }
 
-    render() {
+    positionElementOnSelect(el) {
+        let selectEl = this._vNode.dom.querySelector('select')
+        let rect = selectEl.getBoundingClientRect()
+
+        el.style.left = `${selectEl.offsetLeft}px`
+        el.style.top = `${selectEl.offsetTop}px`
+        el.style.width = `${rect.width}px`
+        el.style.height = `${rect.height}px`
+    }
+
+    render({ children }) {
         return (
             <div
-                className={ 'mc-form-input ' + (this.props.class ? this.props.class : '') }
+                className={ 'mc-form-input mc-form-select ' + (this.props.class ? this.props.class : '') }
                 { ...this.props }
             >
                 {!this.props.hideLabel &&
@@ -61,17 +67,18 @@ export class MCInput extends Component {
                     </label>
                 }
 
-                <input
-                    type="text"
+                <select
                     id={ this.props.name }
                     name={ this.props.name }
-                    onInput={ this.handleChange }
+                    onChange={ this.handleChange }
                     onFocus={ this.handleFocus }
                     onBlur={ this.handleBlur }
                     aria-label={ this.props.label }
-                    disabled={ this.props.disabled }
-                />
+                >
+                    { children }
+                </select>
 
+                <div class="mc-form-select-overlay"></div>
                 <div class="mc-form-input-border"></div>
 
                 {this.props.error &&

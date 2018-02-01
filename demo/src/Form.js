@@ -1,6 +1,6 @@
 import { Link } from 'inferno-router'
 import { MCGrid, MCGridCell } from '../../packages/micro-ui-grid/dist/'
-import { MCInput, MCTextArea } from '../../packages/micro-ui-form/dist/'
+import { MCInput, MCTextArea, MCSelect } from '../../packages/micro-ui-form/dist/'
 
 export default function Form() {
     return (
@@ -15,6 +15,29 @@ export default function Form() {
                         <MCInput class="pa2" name="firstName" label="First Name" placeholder="Enter your first name" />
                         <MCInput class="pa2" name="firstName" label="First Name" placeholder="Enter your first name" error="This field is required." />
                         <MCInput class="pa2" name="firstName" label="First Name" labelCaption="Your real first name" placeholder="Enter your first name" />
+                        <MCInput class="pa2" name="firstName" label="First Name" labelLeft placeholder="Enter your first name" />
+
+                        <MCSelect class="pa2" name="states" label="States">
+                            <option value="">select one</option>
+                            <option value="VA">Virginia</option>
+                            <option value="MD">Maryland</option>
+                            <option value="CA">California</option>
+                        </MCSelect>
+
+                        <MCSelect class="pa2" name="states" label="States" error="This field is required.">
+                            <option value="">select one</option>
+                            <option value="VA">Virginia</option>
+                            <option value="MD">Maryland</option>
+                            <option value="CA">California</option>
+                        </MCSelect>
+
+                        <MCSelect class="pa2" name="states" label="States" error="This field is required.">
+                            <option value="">select one</option>
+                            <option value="VA">Virginia</option>
+                            <option value="MD">Maryland</option>
+                            <option value="CA">California</option>
+                        </MCSelect>
+
                         <MCInput class="pa2" name="firstName" label="First Name" labelLeft placeholder="Enter your first name" />
                     </MCGridCell>
 
