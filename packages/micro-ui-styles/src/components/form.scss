@@ -1,0 +1,117 @@
+$mc-form-input-font-size: $mc-font-size !default;
+$mc-form-input-border-width: 2px !default;
+$mc-form-input-border-color: $mc-text-light-color !default;
+$mc-form-input-focus-border-color: $mc-primary-color !default;
+
+$mc-form-label-font-size: 14px !default;
+$mc-form-label-caption-font-size: 12px !default;
+$mc-form-label-focus-text-color: $mc-primary-color !default;
+
+.mc-form-input-placeholder {
+    color: $mc-text-light-color;
+}
+
+.mc-form-input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    position: relative;
+
+    label {
+        color: $mc-text-light-color;
+        display: block;
+        font-size: pxToEm($mc-form-label-font-size);
+        margin-bottom: pxToEm(8px, $mc-form-label-font-size);
+        transition: color .15s ease;
+
+        span {
+            display: block;
+            font-size: pxToEm($mc-form-label-caption-font-size, $mc-form-label-font-size);
+            font-style: italic;
+            margin-top: pxToEm(3px, $mc-form-label-caption-font-size);
+        }
+    }
+
+    input {
+        border-color: $mc-form-input-border-color;
+        border-style: solid;
+        border-width: $mc-form-input-border-width;
+        box-sizing: border-box;
+        font-size: pxToEm($mc-form-input-font-size);
+        outline: none;
+        transition: border .15s ease;
+
+        .mc-focus & {
+            border-color: transparent;
+        }
+
+        &::placeholder { @extend .mc-form-input-placeholder; }
+        &::-webkit-input-placeholder { @extend .mc-form-input-placeholder; }
+        &::-moz-placeholder { @extend .mc-form-input-placeholder; }
+        &:-ms-input-placeholder { @extend .mc-form-input-placeholder; }
+        &:-moz-placeholder { @extend .mc-form-input-placeholder; }
+    }
+
+    .mc-form-input-border {
+        border-color: $mc-form-input-focus-border-color;
+        border-style: solid;
+        border-width: $mc-form-input-border-width;
+        box-sizing: border-box;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .15s ease;
+    }
+
+    .mc-form-error-message {
+        color: $mc-danger-color;
+        font-size: pxToEm(14px);
+        margin-top: pxToEm(10px, 14px);
+        text-align: right;
+        width: 100%;
+    }
+}
+
+.mc-form-input[labelLeft] {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    label {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: pxToEm(10px, $mc-form-label-font-size);
+
+        span {
+            margin-right: pxToEm(10px, $mc-form-label-caption-font-size);
+        }
+    }
+
+    input {
+        flex: 1 0 auto;
+    }
+}
+
+.mc-form-input.mc-focus {
+    label {
+        color: $mc-form-label-focus-text-color;
+    }
+
+    .mc-form-input-border {
+        opacity: 1;
+    }
+}
+
+.mc-form-input[error] {
+    label {
+        color: $mc-danger-color;
+    }
+
+    .mc-form-input-border {
+        border-color: $mc-danger-color;
+        opacity: 1;
+    }
+}

@@ -4,6 +4,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 import Alerts from './Alerts'
 import Badges from './Badges'
 import Buttons from './Buttons'
+import Form from './Form'
 import Grid from './Grid'
 import Icons from './Icons'
 import Images from './Images'
@@ -23,7 +24,9 @@ function App({ children }) {
                 </MCToolbarRow>
             </MCToolbar>
 
-            <div>{children}</div>
+            <div class="pa4">
+                { children }
+            </div>
         </div>
     )
 }
@@ -36,6 +39,7 @@ function ComponentList() {
             <p><Link to="/alerts">Alerts</Link></p>
             <p><Link to="/badges">Badges</Link></p>
             <p><Link to="/buttons">Buttons</Link></p>
+            <p><Link to="/form">Form</Link></p>
             <p><Link to="/grid">Grid</Link></p>
             <p><Link to="/icons">Icons</Link></p>
             <p><Link to="/images">Images</Link></p>
@@ -50,6 +54,7 @@ const routes = (
             <Route path="/alerts" component={ Alerts } />
             <Route path="/badges" component={ Badges } />
             <Route path="/buttons" component={ Buttons } />
+            <Route path="/form" component={ Form } />
             <Route path="/grid" component={ Grid } />
             <Route path="/icons" component={ Icons } />
             <Route path="/images" component={ Images } />
