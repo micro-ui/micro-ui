@@ -15,7 +15,7 @@ export class MCInput extends Component {
 
     componentDidMount() {
         this.positionBorder()
-        setTimeout(this.positionBorder.bind(this), 50)      // TODO: required for left labels, find a better way
+        setTimeout(this.positionBorder.bind(this), 50)      // font load can alter width of border for left labels, so trigger again to make sure we're positioned
     }
 
     handleChange(event) {
