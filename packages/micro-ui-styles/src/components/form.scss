@@ -1,5 +1,23 @@
-.mc-form-input-placeholder {
-    color: $mc-text-light-color;
+%mc-form-input-base-style {
+    border-color: $mc-form-input-border-color;
+    border-style: solid;
+    border-width: $mc-form-input-border-width;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: pxToEm($mc-form-input-font-size);
+    outline: none;
+    resize: none;
+    transition: border .15s ease;
+
+    .mc-focus & {
+        border-color: transparent;
+    }
+
+    &::placeholder { color: $mc-text-light-color; }
+    &::-webkit-input-placeholder { color: $mc-text-light-color; }
+    &::-moz-placeholder { color: $mc-text-light-color; }
+    &:-ms-input-placeholder { color: $mc-text-light-color; }
+    &:-moz-placeholder { color: $mc-text-light-color; }
 }
 
 .mc-form-input {
@@ -24,30 +42,20 @@
         }
     }
 
-    input {
-        border-color: $mc-form-input-border-color;
-        border-style: solid;
-        border-width: $mc-form-input-border-width;
-        box-sizing: border-box;
-        font-size: pxToEm($mc-form-input-font-size);
-        outline: none;
-        transition: border .15s ease;
+    input,
+    textarea {
+        @extend %mc-form-input-base-style;
+    }
 
-        .mc-focus & {
-            border-color: transparent;
-        }
-
-        &::placeholder { @extend .mc-form-input-placeholder; }
-        &::-webkit-input-placeholder { @extend .mc-form-input-placeholder; }
-        &::-moz-placeholder { @extend .mc-form-input-placeholder; }
-        &:-ms-input-placeholder { @extend .mc-form-input-placeholder; }
-        &:-moz-placeholder { @extend .mc-form-input-placeholder; }
+    textarea {
+        height: pxToEm($mc-form-input-font-size * 7);
     }
 
     .mc-form-input-border {
         border-color: $mc-form-input-focus-border-color;
         border-style: solid;
         border-width: $mc-form-input-border-width;
+        border-radius: 3px;
         box-sizing: border-box;
         opacity: 0;
         pointer-events: none;
@@ -81,7 +89,8 @@
         }
     }
 
-    input {
+    input,
+    textarea {
         flex: 1 0 auto;
     }
 }

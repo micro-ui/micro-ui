@@ -1,6 +1,6 @@
 import Component from 'inferno-component'
 
-export class MCInput extends Component {
+export class MCTextArea extends Component {
 
     state = {
         value: ''
@@ -33,17 +33,17 @@ export class MCInput extends Component {
     }
 
     positionBorder() {
-        let inputEl = this._vNode.dom.querySelector('input')
-        let rect = inputEl.getBoundingClientRect()
-        let border = inputEl.nextSibling
+        let textAreaEl = this._vNode.dom.querySelector('textarea')
+        let rect = textAreaEl.getBoundingClientRect()
+        let border = textAreaEl.nextSibling
 
-        border.style.left = `${inputEl.offsetLeft}px`
-        border.style.top = `${inputEl.offsetTop}px`
+        border.style.left = `${textAreaEl.offsetLeft}px`
+        border.style.top = `${textAreaEl.offsetTop}px`
         border.style.width = `${rect.width}px`
         border.style.height = `${rect.height}px`
     }
 
-    render() {
+    render({ children }) {
         return (
             <div
                 className={ 'mc-form-input ' + (this.props.class ? this.props.class : '') }
@@ -61,8 +61,7 @@ export class MCInput extends Component {
                     </label>
                 }
 
-                <input
-                    type="text"
+                <textarea
                     id={ this.props.name }
                     name={ this.props.name }
                     onInput={ this.handleChange }
@@ -70,7 +69,9 @@ export class MCInput extends Component {
                     onBlur={ this.handleBlur }
                     aria-label={ this.props.label }
                     { ...this.props }
-                />
+                >
+                    { children }
+                </textarea>
 
                 <div class="mc-form-input-border"></div>
 
