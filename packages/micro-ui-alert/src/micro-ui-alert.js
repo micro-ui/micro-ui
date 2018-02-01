@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-alert.scss'
 
 const ICON_SUCCESS = 'check_circle'
 const ICON_ERROR = 'error'
