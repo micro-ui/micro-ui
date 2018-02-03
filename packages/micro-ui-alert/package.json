@@ -1,6 +1,6 @@
 {
   "name": "micro-ui-alert",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "micro-ui-alert component",
   "author": "Jon Carlson",
   "repository": "https://github.com/joncarlson/micro-ui",
@@ -71,6 +71,6 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "micro-ui-styles": "^0.0.7"
+    "micro-ui-styles": "^0.0.8"
   }
 }
