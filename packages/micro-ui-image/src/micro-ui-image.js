@@ -1,6 +1,6 @@
 import * as infernoStuff from 'inferno'
 import Component from 'inferno-component'
-import { onScrollTo, delay, debug } from '../../micro-ui-shared/utilities'
+import { onScrollTo, delay, debug } from 'micro-ui-utilities'
 import './micro-ui-image.scss'
 
 const SCROLL_THRESHOLD = 200
