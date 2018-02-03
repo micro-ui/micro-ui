@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-toolbar.scss'
 
 export class MCToolbarSection extends Component {
 

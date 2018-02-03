@@ -1,5 +1,6 @@
 import Component from 'inferno-component'
 import { MDCRipple } from '@material/ripple'
+import './micro-ui-button.scss'
 
 export class MCButton extends Component {
 

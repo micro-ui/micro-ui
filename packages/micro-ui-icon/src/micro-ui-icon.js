@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-icon.scss'
 
 export class MCIcon extends Component {
 

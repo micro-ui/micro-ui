@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-grid.scss'
 
 export class MCGridCell extends Component {
 

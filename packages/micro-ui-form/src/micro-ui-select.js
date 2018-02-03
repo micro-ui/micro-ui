@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-form.scss'
 
 export class MCSelect extends Component {
 

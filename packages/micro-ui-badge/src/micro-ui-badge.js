@@ -1,4 +1,5 @@
 import Component from 'inferno-component'
+import './micro-ui-badge.scss'
 
 export class MCBadge extends Component {
 
