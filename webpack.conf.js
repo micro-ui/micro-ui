@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = env => {
 	return {
-		entry: './demo/src/index.js',
+		entry: './demo/index.js',
 		output: {
 			path: __dirname + '/demo',
 			filename: 'bundle.js',
