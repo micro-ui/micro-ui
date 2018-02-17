@@ -1,6 +1,6 @@
 import { linkEvent } from 'inferno'
 import { Link } from 'inferno-router'
-import { MCButton, MCButtonGroup, } from '../../packages/micro-ui-button/dist/'
+import { MCButton, MCButtonGroup, } from '../../micro-ui-button/dist/'
 
 export default function Buttons() {
     return (

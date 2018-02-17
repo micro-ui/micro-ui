@@ -1,5 +1,5 @@
 import { Link } from 'inferno-router'
-import { MCImage } from '../../packages/micro-ui-image/dist/'
+import { MCImage } from '../../micro-ui-image/dist/'
 
 export default function Images() {
     return (

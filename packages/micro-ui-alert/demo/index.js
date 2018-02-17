@@ -1,5 +1,5 @@
 import { Link } from 'inferno-router'
-import { MCAlert } from '../../packages/micro-ui-alert/dist/'
+import { MCAlert } from '../../micro-ui-alert/dist/'
 
 export default function Alerts() {
     return (

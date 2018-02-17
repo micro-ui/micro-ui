@@ -1,5 +1,5 @@
 import { Link } from 'inferno-router'
-import { MCGrid, MCGridCell } from '../../packages/micro-ui-grid/dist/'
+import { MCGrid, MCGridCell } from '../../micro-ui-grid/dist/'
 
 export default function Grid() {
     return (

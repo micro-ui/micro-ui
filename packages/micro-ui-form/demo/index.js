@@ -1,6 +1,6 @@
 import { Link } from 'inferno-router'
-import { MCGrid, MCGridCell } from '../../packages/micro-ui-grid/dist/'
-import { MCInput, MCTextArea, MCSelect } from '../../packages/micro-ui-form/dist/'
+import { MCGrid, MCGridCell } from '../../micro-ui-grid/dist/'
+import { MCInput, MCTextArea, MCSelect } from '../../micro-ui-form/dist/'
 
 export default function Form() {
     return (

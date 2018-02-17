@@ -1,5 +1,5 @@
 import { Link } from 'inferno-router'
-import { MCIcon } from '../../packages/micro-ui-icon/dist/'
+import { MCIcon } from '../../micro-ui-icon/dist/'
 
 export default function Icons() {
     return (

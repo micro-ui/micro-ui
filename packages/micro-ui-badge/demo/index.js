@@ -1,5 +1,5 @@
 import { Link } from 'inferno-router'
-import { MCBadge } from '../../packages/micro-ui-badge/dist/'
+import { MCBadge } from '../../micro-ui-badge/dist/'
 
 export default function Badges() {
     return (
