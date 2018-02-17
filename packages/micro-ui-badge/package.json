@@ -3,12 +3,12 @@
   "version": "0.0.4",
   "description": "micro-ui-badge component",
   "author": "Jon Carlson",
-  "repository": "https://github.com/joncarlson/micro-ui",
+  "repository": "https://github.com/micro-ui/micro-ui",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joncarlson/micro-ui/issues"
+    "url": "https://github.com/micro-ui/micro-ui/issues"
   },
-  "homepage": "https://github.com/joncarlson/micro-ui#readme",
+  "homepage": "https://github.com/micro-ui/micro-ui#readme",
   "main": "dist/index.js",
   "keywords": [
     "inferno",
