@@ -1,6 +1,14 @@
 @import "../../micro-ui-styles/dist/themes/default-theme";
 
+$mc-toolbar-link-color: #fff !default;
+
+$mc-toolbar-link-hover-color: darken($mc-toolbar-link-color, 10%) !default;
+
 .mc-toolbar-section {
+    &.mdc-toolbar__section {
+        height: auto;
+    }
+
     &[align-left] {
         justify-content: flex-start;
         order: -1;
@@ -11,7 +19,21 @@
         order: 1;
     }
 
-    &.mdc-toolbar__section {
-        height: auto;
+    .title {
+        @include mdc-typography(title);
+        @include mdc-typography-overflow-ellipsis;
+
+        align-self: center;
+        line-height: 1.5rem;
+        z-index: 1;
+    }
+
+    a {
+        color: $mc-toolbar-link-color;
+        transition: color .15s ease;
+
+        &:hover {
+            color: $mc-toolbar-link-hover-color;
+        }
     }
 }

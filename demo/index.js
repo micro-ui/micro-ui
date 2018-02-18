@@ -8,6 +8,7 @@ import Form from '../packages/micro-ui-form/demo/'
 import Grid from '../packages/micro-ui-grid/demo/'
 import Icons from '../packages/micro-ui-icon/demo/'
 import Images from '../packages/micro-ui-image/demo/'
+import Toolbars from '../packages/micro-ui-toolbar/demo/'
 import { MCToolbar, MCToolbarRow, MCToolbarSection } from '../packages/micro-ui-toolbar/dist/'
 import './index.scss'
 
@@ -43,6 +44,7 @@ function ComponentList() {
             <p><Link to="/grid">Grid</Link></p>
             <p><Link to="/icons">Icons</Link></p>
             <p><Link to="/images">Images</Link></p>
+            <p><Link to="/toolbars">Toolbars</Link></p>
         </div>
     )
 }
@@ -58,6 +60,7 @@ const routes = (
             <Route path="/grid" component={ Grid } />
             <Route path="/icons" component={ Icons } />
             <Route path="/images" component={ Images } />
+            <Route path="/toolbars" component={ Toolbars } />
 			<Route path="*" component={ ComponentList } />
 		</Route>
 	</Router>
