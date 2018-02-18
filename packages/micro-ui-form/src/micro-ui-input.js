@@ -71,6 +71,7 @@ export class MCInput extends Component {
                     onBlur={ this.handleBlur }
                     aria-label={ this.props.label }
                     disabled={ this.props.disabled }
+                    placeholder={ this.props.placeholder }
                 />
 
                 <div class="mc-form-input-border"></div>

@@ -12,10 +12,10 @@ export default function Form() {
             <div style="max-width: 1000px;">
                 <MCGrid>
                     <MCGridCell class="pr4" span="6">
-                        <MCInput class="pa2" name="firstName" label="First Name" placeholder="Enter your first name" />
-                        <MCInput class="pa2" name="firstName" label="First Name" placeholder="Enter your first name" error="This field is required." />
-                        <MCInput class="pa2" name="firstName" label="First Name" labelCaption="Your real first name" placeholder="Enter your first name" />
-                        <MCInput class="pa2" name="firstName" label="First Name" labelLeft placeholder="Enter your first name" />
+                        <MCInput class="pa2" name="firstName1" label="First Name" placeholder="Enter your first name" />
+                        <MCInput class="pa2" name="firstName2" label="First Name" placeholder="Enter your first name" error="This field is required." />
+                        <MCInput class="pa2" name="firstName3" label="First Name" labelCaption="Your real first name" placeholder="Enter your first name" />
+                        <MCInput class="pa2" name="firstName4" label="First Name" labelLeft placeholder="Enter your first name" />
 
                         <MCSelect class="pa2" name="states" label="States">
                             <option value="">select one</option>

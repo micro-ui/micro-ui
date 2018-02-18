@@ -32,6 +32,7 @@
   },
   "scripts": {
     "publish": "lerna bootstrap --independent && lerna publish --independent",
-    "start": "webpack-dev-server --env.NODE_ENV=development --quiet --config webpack.conf.js --host 0.0.0.0"
+    "start": "webpack-dev-server --env.NODE_ENV=development --quiet --config webpack.conf.js --host 0.0.0.0",
+    "test": "testcafe 'chrome:headless' packages/**/src/**/*.spec.js"
   }
 }
